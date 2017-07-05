@@ -1,0 +1,25 @@
+{
+  "name": "Unofficial SoftUni AutoScroll Fix",
+  "version": "0.0.2",
+  "manifest_version": 2,
+  "description": "An extension that fixes SoftUni's annoying autoscroll.",
+  "homepage_url": "https://github.com/biskazz/SoftUni-AutoScroll-Fix-Extension",
+  "icons": {
+    "16": "icons/su.png",
+    "48": "icons/su.png",
+    "128": "icons/su.png"
+  },
+  "permissions": [
+    "https://softuni.bg/trainings/*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://softuni.bg/trainings/*/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
